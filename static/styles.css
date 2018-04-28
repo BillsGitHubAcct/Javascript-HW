@@ -1,7 +1,7 @@
 
-* {
-  box-sizing: border-box;
-}
+
+
+
 
 #showData {
   background-position: 10px 10px;
@@ -12,6 +12,9 @@
   border: 1px solid #ddd;
   margin-bottom: 12px;
   align: left;
+}
+h1 {font-size: 45px;
+font-family: 'Orbitron', sans-serif;
 }
 
 table {
@@ -27,15 +30,22 @@ table th, table td {
   padding: 12px;
 }
 
+table th {
+	border: 5px solid #221a47;
+	background-color: #221a47;
+	font-size: 15px;
+	color: #fff;
+	font-family: 'Orbitron', sans-serif;
+}
+
 table tr {
   border-bottom: 1px solid #ddd;
 }
 
-table tr.header, table tr:hover {
-  background-color: #f1f1f1;
-}
 td{
     word-wrap:break-word;
+	border: 5px solid #221a47;
+	text-align: top;
 }
 tr:nth-child(even) {
     background-color: #b5cc99;
@@ -44,6 +54,14 @@ tr:nth-child(odd) {
     color: #f4424e;
 	background-color: #f4f4fc;
 }
+
+input {
+	backfound-color: #221a47;
+	width: 100%;
+	border-collapse: collapse;
+	
+}
+
 
 #showData {
 	width: 100%;

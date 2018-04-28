@@ -9,11 +9,7 @@ function mainProcessing(){
 	// Calls to function with anonymous callback
 	getData(function(response) {		
 		jsonresponse = JSON.parse(response);
-	//	console.log('searchDate = ' + searchDate);
-	//	console.log('searchCity = ' + searchCity);
-	//  console.log('searchState = ' + searchState);
-	//	console.log('searchCountry = ' + searchCountry);
-	//	console.log('searchShape = ' + searchShape);
+	//  Filter results if non null value global in search variable
 		if (searchDate != ""){
 			jsonresponse = filteredResults(jsonresponse,"datetime")};
 		if (searchCity != ""){
@@ -25,9 +21,7 @@ function mainProcessing(){
 		if (searchShape != ""){
 			jsonresponse = filteredResults(jsonresponse,"shape")};
 
-	//	console.log('after response is returned');
-	//	console.log(jsonresponse);
-		// Generate table from parsed JSON Values
+	// Dynamically generate table from parsed JSON Values
 		createTable(jsonresponse);
 		    
 		})
@@ -56,6 +50,7 @@ function getData(callback) {
 	xobj.overrideMimeType("application/json");
 	xobj.open('GET', 'https://billsgithubacct.github.io/Javascript-HW/dataFull.json', true);
 	//xobj.open('GET', 'https://billsgithubacct.github.io/Javascript-HW/dataPart.json', true);
+	
 	xobj.onreadystatechange = function () {
 		if (xobj.readyState == 4 ) {
 		// .open will NOT return a value but simply returns undefined in async mode so use a callback
@@ -65,7 +60,7 @@ function getData(callback) {
 	xobj.send(null);
 	}
 	// First time display table with no filtering a.k.a using  
-	// "Dummy" value in searchDate to prohibit filtering the data
+	// "null" value in searchDate to prohibit filtering the data
 mainProcessing();
 	
 function filteredResults(data, field) {
