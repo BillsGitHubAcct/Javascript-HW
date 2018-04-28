@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>Javascript and DOM</title>
+	<link rel= "stylesheet" type= "text/css" href= "static/styles.css">
+
+<script type = 'text/javascript' src = 'js/table.js'>    
+</script>
+</head>
+<body>
+
+<div class = "container" >
+  <div class = "row">
+    <div class = "col-md-12 text-center">
+		<h1> UFO Sightings Table</h1>
+		</br>
+	</div>
+	<form class="form-inline">
+		<div class="form-group">
+			 
+			<input type="text" class="form-control" id="dateInput" placeholder="Enter a date">
+		</div>
+		<div class="form-group">
+			
+			<input type="text" class="form-control" id="cityInput" placeholder="Enter a City">
+		</div>
+		<div class="form-group">
+			
+			<input type="text" class="form-control" id="stateInput" placeholder="Enter a State">
+		</div>
+		<div class="form-group">
+			
+			<input type="text" class="form-control" id="countryInput" placeholder="Enter a Country">
+		</div>
+		<div class="form-group">
+			
+			<input type="text" class="form-control" id="shapeInput" placeholder="Enter a Shape">
+		</div>
+		 <button onclick="handleSubmitButtonClick(); return false;" id="submit" type="submit" class="btn	btn-default">Submit</button>
+	</form>
+	</br>
+	<div id="showData"></div>
+		
+  </div>
+</div>
+		
+</body>
+
+</html>
+ 
